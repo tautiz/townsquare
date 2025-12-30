@@ -1,10 +1,10 @@
 const state = () => ({
   playlistId: "PLmHYnYPt5DSlRADaIHYA63eZWJjkIQHhU",
   nightTrackId: "PADoRF6iPx8",
-  volume: 50,
+  volume: 100,
   isEnabled: true,
-  isPlaying: false,
-  showVisual: true,
+  isPlaying: true,
+  showVisual: false,
 });
 
 const mutations = {

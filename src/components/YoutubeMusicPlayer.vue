@@ -77,8 +77,8 @@ export default {
       };
 
       this.player = new window.YT.Player("yt-player", {
-        height: "200",
-        width: "300",
+        height: "100%",
+        width: "100%",
         playerVars: {
           ...commonVars,
           listType: "playlist",
@@ -100,8 +100,8 @@ export default {
       });
 
       this.nightPlayer = new window.YT.Player("yt-night-player", {
-        height: "200",
-        width: "300",
+        height: "100%",
+        width: "100%",
         playerVars: {
           ...commonVars,
           videoId: this.nightTrackId,
@@ -272,8 +272,7 @@ export default {
   position: fixed;
   top: 10px;
   left: 10px;
-  width: 220px;
-  height: 440px;
+  width: 300px;
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
@@ -285,16 +284,25 @@ export default {
   pointer-events: auto;
   opacity: 1;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
 
   &.is-hidden {
-    transform: translateX(-250px);
+    transform: translateX(-350px);
     opacity: 0;
     pointer-events: none;
   }
 
+  div[id^="yt-"] {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
   iframe {
     width: 100% !important;
-    height: 200px !important;
+    height: 100% !important;
+    border: none;
   }
 }
 </style>
