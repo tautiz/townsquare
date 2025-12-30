@@ -4,6 +4,7 @@ import persistence from "./persistence";
 import socket from "./socket";
 import players from "./modules/players";
 import session from "./modules/session";
+import audio from "./modules/audio";
 import editionJSON from "../editions.json";
 import rolesJSON from "../roles.json";
 import fabledJSON from "../fabled.json";
@@ -99,6 +100,7 @@ export default new Vuex.Store({
   modules: {
     players,
     session,
+    audio,
   },
   state: {
     grimoire: {
@@ -116,6 +118,7 @@ export default new Vuex.Store({
       edition: false,
       fabled: false,
       gameState: false,
+      musicSettings: false,
       generateGame: false,
       nightOrder: false,
       reference: false,

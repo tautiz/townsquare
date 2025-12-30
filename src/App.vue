@@ -36,6 +36,15 @@
     <VoteHistoryModal />
     <GameStateModal />
     <GenerateGameModal />
+    <MusicSettingsModal 
+      :playlist="$refs.ytPlayer ? $refs.ytPlayer.playlist : []"
+      :currentTrackIndex="$refs.ytPlayer ? $refs.ytPlayer.currentTrackIndex : -1"
+      @next="$refs.ytPlayer.nextTrack()" 
+      @prev="$refs.ytPlayer.prevTrack()" 
+      @toggle="$refs.ytPlayer.togglePlay()" 
+      @play-track="$refs.ytPlayer.playTrack($event)"
+    />
+    <YoutubeMusicPlayer ref="ytPlayer" />
     <Gradients />
     <span id="version">v{{ version }}</span>
   </div>
@@ -58,11 +67,15 @@ import FabledModal from "@/components/modals/FabledModal";
 import VoteHistoryModal from "@/components/modals/VoteHistoryModal";
 import GameStateModal from "@/components/modals/GameStateModal";
 import GenerateGameModal from "@/components/modals/GenerateGameModal";
+import MusicSettingsModal from "@/components/modals/MusicSettingsModal";
+import YoutubeMusicPlayer from "@/components/YoutubeMusicPlayer";
 
 export default {
   components: {
     GameStateModal,
     GenerateGameModal,
+    MusicSettingsModal,
+    YoutubeMusicPlayer,
     VoteHistoryModal,
     FabledModal,
     NightOrderModal,
@@ -119,6 +132,9 @@ export default {
           if (this.session.voteHistory.length || !this.session.isSpectator) {
             this.$store.commit("toggleModal", "voteHistory");
           }
+          break;
+        case "m":
+          this.$store.commit("toggleModal", "musicSettings");
           break;
         case "s":
           if (this.session.isSpectator) return;

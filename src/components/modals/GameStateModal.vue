@@ -21,6 +21,9 @@
       <div class="button demon" @click="load" v-if="!session.isSpectator">
         <font-awesome-icon icon="cog" /> Įkelti JSON
       </div>
+      <div class="button townsfolk" @click="toggleModal('musicSettings')">
+        <font-awesome-icon icon="music" /> Muzikos nustatymai
+      </div>
     </div>
   </Modal>
 </template>

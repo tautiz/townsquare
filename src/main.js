@@ -53,6 +53,13 @@ const faIcons = [
   "VoteYea",
   "WindowMaximize",
   "WindowMinimize",
+  "Music",
+  "Play",
+  "Pause",
+  "StepForward",
+  "StepBackward",
+  "Eye",
+  "EyeSlash",
 ];
 const fabIcons = ["Github", "Discord"];
 library.add(
