@@ -145,6 +145,14 @@ export default {
       this.$store.commit("toggleModal", "reminder");
     },
     openRoleModal(playerIndex) {
+      if (this.grimoire.isNight) {
+        const player = this.players[playerIndex];
+        if (player && player.role && player.role.id) {
+          this.$store.commit("setShowInfoRole", player.role);
+          this.$store.commit("toggleModal", "showInfo");
+          return;
+        }
+      }
       const player = this.players[playerIndex];
       if (this.session.isSpectator && player && player.role.team === "traveler")
         return;

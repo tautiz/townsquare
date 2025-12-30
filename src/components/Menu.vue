@@ -38,8 +38,51 @@
             @click="tab = 'players'"
           />
           <font-awesome-icon icon="theater-masks" @click="tab = 'characters'" />
+          <font-awesome-icon icon="music" @click="tab = 'audio'" />
           <font-awesome-icon icon="question" @click="tab = 'help'" />
         </li>
+
+        <template v-if="tab === 'audio'">
+          <!-- Audio -->
+          <li class="headline">Garsas</li>
+          <li @click="toggleModal('musicSettings')">
+            Muzikos nustatymai
+            <em>[M]</em>
+          </li>
+          <li @click="toggleAudioEnabled">
+            Muzika: 
+            <template v-if="audio.isEnabled">Įjungta</template>
+            <template v-if="!audio.isEnabled">Išjungta</template>
+            <em>
+              <font-awesome-icon
+                :icon="['fas', audio.isEnabled ? 'check-square' : 'square']"
+              />
+            </em>
+          </li>
+          <li @click="toggleAudioVisual">
+            Rodyti grotuvą: 
+            <template v-if="audio.showVisual">Taip</template>
+            <template v-if="!audio.showVisual">Ne</template>
+            <em>
+              <font-awesome-icon
+                :icon="['fas', audio.showVisual ? 'eye' : 'eye-slash']"
+              />
+            </em>
+          </li>
+          <li>
+            Garsumas
+            <em>
+              <input 
+                type="range" 
+                min="0" 
+                max="100" 
+                :value="audio.volume" 
+                @input="setAudioVolume($event.target.value)"
+                style="width: 80px; margin: 0;"
+              />
+            </em>
+          </li>
+        </template>
 
         <template v-if="tab === 'grimoire'">
           <!-- Grimoire -->
@@ -211,7 +254,7 @@ import { mapMutations, mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState(["grimoire", "session", "edition"]),
+    ...mapState(["grimoire", "session", "edition", "audio"]),
     ...mapState("players", ["players"]),
   },
   data() {
@@ -331,6 +374,11 @@ export default {
       "setZoom",
       "toggleModal",
     ]),
+    ...mapMutations("audio", {
+      toggleAudioEnabled: "toggleEnabled",
+      toggleAudioVisual: "toggleVisual",
+      setAudioVolume: "setVolume",
+    }),
   },
 };
 </script>
@@ -472,6 +520,7 @@ export default {
         &.players .fa-users,
         &.characters .fa-theater-masks,
         &.session .fa-broadcast-tower,
+        &.audio .fa-music,
         &.help .fa-question {
           background: linear-gradient(
             to bottom,

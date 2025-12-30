@@ -118,27 +118,27 @@ export default {
         rolesFirstNight.push(
           {
             id: "evil",
-            name: "Minion info",
+            name: this.edition.id === 'hp' ? "Pakalikų info" : "Minion info",
             firstNight: 5,
             team: "minion",
             players: this.players.filter((p) => p.role.team === "minion"),
-            firstNightReminder:
-              "• If more than one Minion, they all make eye contact with each other. " +
-              "• Show the “This is the Demon” card. Point to the Demon.",
+            firstNightReminder: this.edition.id === 'hp' 
+              ? "• Jei yra daugiau nei vienas Pakalikas, jie visi užmezga akių kontaktą. • Parodykite „Tai yra Demonas“ kortelę. Parodykite į Demoną."
+              : "• If more than one Minion, they all make eye contact with each other. • Show the “This is the Demon” card. Point to the Demon.",
           },
           {
             id: "evil",
-            name: "Demon info & bluffs",
+            name: this.edition.id === 'hp' ? "Demono info ir blefai" : "Demon info & bluffs",
             firstNight: 8,
             team: "demon",
             players: this.players.filter((p) => p.role.team === "demon"),
-            firstNightReminder:
-              "• Show the “These are your minions” card. Point to each Minion. " +
-              "• Show the “These characters are not in play” card. Show 3 character tokens of good " +
-              "characters not in play.",
+            firstNightReminder: this.edition.id === 'hp'
+              ? "• Parodykite „Tai tavo pakalikai“ kortelę. Parodykite į kiekvieną Pakaliką. • Parodykite „Šių veikėjų nėra žaidime“ kortelę. Parodykite 3 gerųjų veikėjų žetonus, kurių nėra žaidime."
+              : "• Show the “These are your minions” card. Point to each Minion. • Show the “These characters are not in play” card. Show 3 character tokens of good characters not in play.",
           },
         );
       }
+      
       this.roles.forEach((role) => {
         const players = this.players.filter((p) => p.role.id === role.id);
         if (role.firstNight && (role.team !== "traveler" || players.length)) {

@@ -126,12 +126,14 @@ export default new Vuex.Store({
       role: false,
       roles: false,
       voteHistory: false,
+      showInfo: false,
     },
     edition: editionJSONbyId.get("tb"),
     roles: getRolesByEdition(),
     otherTravelers: getTravelersNotInEdition(),
     fabled,
     jinxes,
+    showInfoRole: null,
   },
   getters: {
     /**
@@ -187,6 +189,9 @@ export default new Vuex.Store({
         if (modal === name) continue;
         modals[modal] = false;
       }
+    },
+    setShowInfoRole(state, role) {
+      state.showInfoRole = role;
     },
     /**
      * Store custom roles

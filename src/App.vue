@@ -36,6 +36,7 @@
     <VoteHistoryModal />
     <GameStateModal />
     <GenerateGameModal />
+    <ShowInfoModal />
     <MusicSettingsModal 
       :playlist="$refs.ytPlayer ? $refs.ytPlayer.playlist : []"
       :currentTrackIndex="$refs.ytPlayer ? $refs.ytPlayer.currentTrackIndex : -1"
@@ -65,15 +66,17 @@ import Gradients from "./components/Gradients";
 import NightOrderModal from "./components/modals/NightOrderModal";
 import FabledModal from "@/components/modals/FabledModal";
 import VoteHistoryModal from "@/components/modals/VoteHistoryModal";
-import GameStateModal from "@/components/modals/GameStateModal";
-import GenerateGameModal from "@/components/modals/GenerateGameModal";
-import MusicSettingsModal from "@/components/modals/MusicSettingsModal";
-import YoutubeMusicPlayer from "@/components/YoutubeMusicPlayer";
+import GameStateModal from "./components/modals/GameStateModal";
+import GenerateGameModal from "./components/modals/GenerateGameModal";
+import MusicSettingsModal from "./components/modals/MusicSettingsModal";
+import ShowInfoModal from "./components/modals/ShowInfoModal";
+import YoutubeMusicPlayer from "./components/YoutubeMusicPlayer";
 
 export default {
   components: {
     GameStateModal,
     GenerateGameModal,
+    ShowInfoModal,
     MusicSettingsModal,
     YoutubeMusicPlayer,
     VoteHistoryModal,
