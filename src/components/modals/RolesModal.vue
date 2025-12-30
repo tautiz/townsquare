@@ -45,7 +45,7 @@
         class="button"
         @click="assignRoles"
         :class="{
-          disabled: selectedRoles > nonTravelers || !selectedRoles,
+          disabled: selectedRoles > players.length || !selectedRoles,
         }"
       >
         <font-awesome-icon icon="people-arrows" />
@@ -97,16 +97,21 @@ export default {
   methods: {
     selectRandomRoles() {
       this.roleSelection = {};
-      this.roles.forEach((role) => {
+      const allRoles = Array.from(this.roles.values());
+      allRoles.forEach((role) => {
         if (!this.roleSelection[role.team]) {
           this.$set(this.roleSelection, role.team, []);
         }
         this.roleSelection[role.team].push(role);
         this.$set(role, "selected", 0);
       });
-      delete this.roleSelection["traveler"];
-      const playerCount = Math.max(5, this.nonTravelers);
-      const composition = this.game[playerCount - 5];
+
+      const playerCount = this.players.length;
+      const nonTravelerCount = Math.min(playerCount, 15);
+      const travelerCount = Math.max(0, playerCount - 15);
+
+      // 1. Select basic roles for up to 15 players
+      const composition = this.game[Math.max(0, nonTravelerCount - 5)];
       Object.keys(composition).forEach((team) => {
         for (let x = 0; x < composition[team]; x++) {
           if (this.roleSelection[team]) {
@@ -119,9 +124,35 @@ export default {
           }
         }
       });
+
+      // 2. If there are more than 15 players, select travelers for them
+      if (travelerCount > 0) {
+        const otherTravelers = Array.from(this.$store.state.otherTravelers.values());
+        const travelers = allRoles.filter(r => r.team === 'traveler');
+        const allAvailableTravelers = [...travelers, ...otherTravelers];
+        
+        if (!this.roleSelection["traveler"]) {
+          this.$set(this.roleSelection, "traveler", travelers);
+        }
+
+        for (let i = 0; i < travelerCount; i++) {
+          const available = allAvailableTravelers.filter(r => !r.selected);
+          if (available.length) {
+            const selected = randomElement(available);
+            this.$set(selected, "selected", (selected.selected || 0) + 1);
+            
+            // Ensure the role is in roleSelection for display
+            if (!this.roleSelection["traveler"].find(r => r.id === selected.id)) {
+               this.roleSelection["traveler"].push(selected);
+            }
+          }
+        }
+      } else {
+        delete this.roleSelection["traveler"];
+      }
     },
     assignRoles() {
-      if (this.selectedRoles <= this.nonTravelers && this.selectedRoles) {
+      if (this.selectedRoles <= this.players.length && this.selectedRoles) {
         // generate list of selected roles and randomize it
         const roles = Object.values(this.roleSelection)
           .map((roles) =>
@@ -134,14 +165,30 @@ export default {
           .map((a) => [Math.random(), a])
           .sort((a, b) => a[0] - b[0])
           .map((a) => a[1]);
+
+        // Separate travelers and non-travelers from the selected roles
+        const travelerRoles = roles.filter((r) => r.team === "traveler");
+        const normalRoles = roles.filter((r) => r.team !== "traveler");
+
         this.players.forEach((player) => {
-          if (player.role.team !== "traveler" && roles.length) {
-            const value = roles.pop();
-            this.$store.commit("players/update", {
-              player,
-              property: "role",
-              value,
-            });
+          if (player.role.team === "traveler") {
+            if (travelerRoles.length) {
+              const value = travelerRoles.pop();
+              this.$store.commit("players/update", {
+                player,
+                property: "role",
+                value,
+              });
+            }
+          } else {
+            if (normalRoles.length) {
+              const value = normalRoles.pop();
+              this.$store.commit("players/update", {
+                player,
+                property: "role",
+                value,
+              });
+            }
           }
         });
         this.$store.commit("toggleModal", "roles");
