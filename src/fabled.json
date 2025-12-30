@@ -5,19 +5,22 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "name": "Doomsayer",
+    "name": "Lemties skelbėjas",
     "team": "fabled",
-    "ability": "If 4 or more players live, each living player may publicly choose (once per game) that a player of their own alignment dies."
+    "ability": "Jei gyvi 4 ar daugiau žaidėjų, kiekvienas gyvas žaidėjas gali viešai pasirinkti (kartą per žaidimą), kad jų pačių pusės žaidėjas mirtų."
   },
   {
     "id": "angel",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Protect", "Something Bad"],
+    "reminders": [
+      "Apsaugoti",
+      "Kažkas blogo"
+    ],
     "setup": false,
-    "name": "Angel",
+    "name": "Angelas",
     "team": "fabled",
-    "ability": "Something bad might happen to whoever is most responsible for the death of a new player."
+    "ability": "Kažkas blogo gali nutikti tam, kas labiausiai atsakingas už naujo žaidėjo mirtį."
   },
   {
     "id": "buddhist",
@@ -25,29 +28,33 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "name": "Buddhist",
+    "name": "Budistas",
     "team": "fabled",
-    "ability": "For the first 2 minutes of each day, veteran players may not talk."
+    "ability": "Pirmas 2 minutes kiekvieną dieną, patyrę žaidėjai negali kalbėti."
   },
   {
     "id": "hellslibrarian",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Something Bad"],
+    "reminders": [
+      "Kažkas blogo"
+    ],
     "setup": false,
-    "name": "Hell's Librarian",
+    "name": "Pragaro Bibliotekininkas",
     "team": "fabled",
-    "ability": "Something bad might happen to whoever talks when the Storyteller has asked for silence."
+    "ability": "Kažkas blogo gali nutikti tam, kas kalba, kai Pasakotojas paprašo tylos."
   },
   {
     "id": "revolutionary",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Used"],
+    "reminders": [
+      "Panaudota"
+    ],
     "setup": false,
-    "name": "Revolutionary",
+    "name": "Revoliucionierius",
     "team": "fabled",
-    "ability": "2 neighboring players are known to be the same alignment. Once per game, one of them registers falsely."
+    "ability": "2 kaimyniniai žaidėjai žinomi kaip tos pačios pusės. Kartą per žaidimą, vienas iš jų registruojasi klaidingai."
   },
   {
     "id": "fiddler",
@@ -55,41 +62,48 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "name": "Fiddler",
+    "name": "Smuikininkas",
     "team": "fabled",
-    "ability": "Once per game, the Demon secretly chooses an opposing player: all players choose which of these 2 players win."
+    "ability": "Kartą per žaidimą, Demonas slapta pasirenka priešingą žaidėją: visi žaidėjai pasirenka, kuris iš šių 2 žaidėjų laimi."
   },
   {
     "id": "toymaker",
     "firstNightReminder": "",
     "otherNight": 1,
-    "otherNightReminder": "If it is a night when a Demon attack could end the game, and the Demon is marked “Final night: No Attack,” then the Demon does not act tonight. (Do not wake them.)",
-    "reminders": ["Final Night: No Attack"],
+    "otherNightReminder": "Jei tai naktis, kai Demono ataka galėtų užbaigti žaidimą, ir Demonas pažymėtas „Paskutinė naktis: Nėra atakos“, tada Demonas šiąnakt neveikia. (Nežadinkite jų.)",
+    "reminders": [
+      "Paskutinė naktis: Nėra atakos"
+    ],
     "setup": false,
-    "name": "Toymaker",
+    "name": "Žaislų gamintojas",
     "team": "fabled",
-    "ability": "The Demon may choose not to attack & must do this at least once per game. Evil players get normal starting info."
+    "ability": "Demonas gali pasirinkti neatakuoti ir privalo tai padaryti bent kartą per žaidimą. Blogio žaidėjai gauna normalią pradinę informaciją."
   },
   {
     "id": "fibbin",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["Used"],
+    "reminders": [
+      "Panaudota"
+    ],
     "setup": false,
-    "name": "Fibbin",
+    "name": "Melagis",
     "team": "fabled",
-    "ability": "Once per game, 1 good player might get false information."
+    "ability": "Kartą per žaidimą, 1 geras žaidėjas gali gauti klaidingą informaciją."
   },
   {
     "id": "duchess",
     "firstNightReminder": "",
     "otherNight": 1,
-    "otherNightReminder": "Wake each player marked “Visitor” or “False Info” one at a time. Show them the Duchess token, then fingers (1, 2, 3) equaling the number of evil players marked “Visitor” or, if you are waking the player marked “False Info,” show them any number of fingers except the number of evil players marked “Visitor.”",
-    "reminders": ["Visitor", "False Info"],
+    "otherNightReminder": "Pažadinkite kiekvieną žaidėją, pažymėtą „Lankytojas“ arba „Klaidinga informacija“, po vieną. Parodykite jiems Hercogienės žetoną, tada pirštus (1, 2, 3), atitinkančius blogio žaidėjų skaičių, pažymėtą „Lankytojas“, arba, jei žadinate žaidėją, pažymėtą „Klaidinga informacija“, parodykite jiems bet kokį pirštų skaičių, išskyrus blogio žaidėjų skaičių, pažymėtą „Lankytojas“.",
+    "reminders": [
+      "Lankytojas",
+      "Klaidinga informacija"
+    ],
     "setup": false,
-    "name": "Duchess",
+    "name": "Hercogienė",
     "team": "fabled",
-    "ability": "Each day, 3 players may choose to visit you. At night*, each visitor learns how many visitors are evil, but 1 gets false info."
+    "ability": "Kiekvieną dieną 3 žaidėjai gali pasirinkti jus aplankyti. Naktį*, kiekvienas lankytojas sužino, kiek lankytojų yra blogi, bet 1 gauna klaidingą informaciją."
   },
   {
     "id": "sentinel",
@@ -97,19 +111,21 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": true,
-    "name": "Sentinel",
+    "name": "Sargybinis",
     "team": "fabled",
-    "ability": "There might be 1 extra or 1 fewer Outsider in play."
+    "ability": "Gali būti 1 papildomas arba 1 mažiau Autsaideris žaidime."
   },
   {
     "id": "spiritofivory",
     "firstNightReminder": "",
     "otherNightReminder": "",
-    "reminders": ["No extra evil"],
+    "reminders": [
+      "Nėra papildomo blogio"
+    ],
     "setup": false,
-    "name": "Spirit of Ivory",
+    "name": "Dramblio Kaulo Dvasia",
     "team": "fabled",
-    "ability": "There can't be more than 1 extra evil player."
+    "ability": "Negali būti daugiau nei 1 papildomas blogio žaidėjas."
   },
   {
     "id": "djinn",
@@ -118,19 +134,21 @@
     "otherNightReminder": "",
     "reminders": [],
     "setup": false,
-    "name": "Djinn",
+    "name": "Džinas",
     "team": "fabled",
-    "ability": "Use the Djinn's special rule. All players know what it is."
+    "ability": "Naudokite Džino specialią taisyklę. Visi žaidėjai žino, kokia ji yra."
   },
   {
     "id": "stormcatcher",
     "firstNight": 1,
-    "firstNightReminder": "Mark a good player as \"Safe\". Wake each evil player and show them the marked player.",
+    "firstNightReminder": "Pažymėkite gerą žaidėją kaip „Saugus“. Pažadinkite kiekvieną blogio žaidėją ir parodykite jiems pažymėtą žaidėją.",
     "otherNightReminder": "",
-    "reminders": ["Safe"],
+    "reminders": [
+      "Saugus"
+    ],
     "setup": false,
-    "name": "Storm Catcher",
+    "name": "Audrų Gaudytojas",
     "team": "fabled",
-    "ability": "Name a good character. If in play, they can only die by execution, but evil players learn which player it is."
+    "ability": "Įvardinkite gerą veikėją. Jei jis žaidime, jis gali mirti tik per egzekuciją, bet blogio žaidėjai sužino, kuris tai žaidėjas."
   }
 ]
