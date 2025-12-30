@@ -22,6 +22,8 @@
           v-for="role in rolesFirstNight"
           :key="role.name"
           :class="[role.team]"
+          @click="showRoleInfo(role)"
+          class="clickable"
         >
           <span class="name">
             {{ role.name }}
@@ -63,6 +65,8 @@
           v-for="role in rolesOtherNight"
           :key="role.name"
           :class="[role.team]"
+          @click="showRoleInfo(role)"
+          class="clickable"
         >
           <span
             class="icon"
@@ -174,6 +178,12 @@ export default {
   },
   methods: {
     ...mapMutations(["toggleModal"]),
+    showRoleInfo(role) {
+      if (role && role.id) {
+        this.$store.commit("setShowInfoRole", role);
+        this.$store.commit("toggleModal", "showInfo");
+      }
+    },
   },
 };
 </script>
@@ -263,6 +273,13 @@ ul {
     display: flex;
     width: 100%;
     margin-bottom: 3px;
+    &.clickable {
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
     .icon {
       width: 6vh;
       background-size: cover;

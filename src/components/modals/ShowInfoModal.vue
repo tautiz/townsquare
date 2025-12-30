@@ -1,5 +1,5 @@
 <template>
-  <div class="show-info-overlay" v-if="modals.showInfo" @click="close">
+  <div class="show-info-overlay" v-if="modals.showInfo">
     <div class="info-content" @click.stop>
       <div class="header">
         <span class="role-name" v-if="role">{{ role.name }}</span>
@@ -42,7 +42,7 @@
       </div>
       
       <div class="footer">
-        <small>Bakstelėkite bet kur už lango ribų, kad uždarytumėte</small>
+        <small>Paspauskite X mygtuką, kad uždarytumėte</small>
       </div>
     </div>
   </div>
