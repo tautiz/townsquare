@@ -4,7 +4,7 @@
     "hatred": [
       {
         "id": "Mathematician",
-        "reason": "The Chambermaid learns if the Mathematician wakes tonight or not, even though the Chambermaid wakes first."
+        "reason": "Kambarinė sužino, ar Matematikas pabunda šiąnakt, ar ne, nors Kambarinė pabunda pirma."
       }
     ]
   },
@@ -13,7 +13,7 @@
     "hatred": [
       {
         "id": "Cannibal",
-        "reason": "If the Cannibal gains the Butler ability, the Cannibal learns this."
+        "reason": "Jei Kanibalas įgyja Liokajaus gebėjimą, Kanibalas tai sužino."
       }
     ]
   },
@@ -22,7 +22,7 @@
     "hatred": [
       {
         "id": "Mathematician",
-        "reason": "The Mathematician learns if the Lunatic attacks a different player(s) than the real Demon attacked."
+        "reason": "Matematikas sužino, jei Lunatikas atakuoja kitą žaidėją(-us) nei atakavo tikrasis Demonas."
       }
     ]
   },
@@ -31,15 +31,15 @@
     "hatred": [
       {
         "id": "Heretic",
-        "reason": "A Pit-Hag can not create a Heretic. "
+        "reason": "Duobkasė negali sukurti Eretiko."
       },
       {
         "id": "Damsel",
-        "reason": "If a Pit-Hag creates a Damsel, the Storyteller chooses which player it is."
+        "reason": "Jei Duobkasė sukuria Damą, Pasakotojas pasirenka, kuris žaidėjas tai yra."
       },
       {
         "id": "Politician",
-        "reason": "A Pit-hag can not create an evil Politician."
+        "reason": "Duobkasė negali sukurti blogo Politiko."
       }
     ]
   },
@@ -48,7 +48,7 @@
     "hatred": [
       {
         "id": "Goblin",
-        "reason": "The Cerenovus may choose to make a player mad that they are the Goblin."
+        "reason": "Cerenovas gali pasirinkti padaryti žaidėją „pamišusį“, kad jis yra Goblinas."
       }
     ]
   },
@@ -57,31 +57,31 @@
     "hatred": [
       {
         "id": "Soldier",
-        "reason": "If Leviathan nominates and executes the Soldier, the Soldier does not die."
+        "reason": "Jei Leviatanas nominuoja ir nubaudžia mirtimi Karį, Karys nemiršta."
       },
       {
         "id": "Monk",
-        "reason": "If Leviathan nominates and executes the player the Monk chose, that player does not die."
+        "reason": "Jei Leviatanas nominuoja ir nubaudžia mirtimi žaidėją, kurį pasirinko Vienuolis, tas žaidėjas nemiršta."
       },
       {
         "id": "Innkeeper",
-        "reason": "If Leviathan nominates and executes a player the Innkeeper chose, that player does not die."
+        "reason": "Jei Leviatanas nominuoja ir nubaudžia mirtimi žaidėją, kurį pasirinko Užeigos savininkas, tas žaidėjas nemiršta."
       },
       {
         "id": "Ravenkeeper",
-        "reason": "If Leviathan is in play & the Ravenkeeper dies by execution, they wake that night to use their ability."
+        "reason": "Jei Leviatanas yra žaidime ir Varnų saugotojas miršta nuo egzekucijos, jis pabunda tą naktį, kad panaudotų savo gebėjimą."
       },
       {
         "id": "Sage",
-        "reason": "If Leviathan is in play & the Sage dies by execution, they wake that night to use their ability."
+        "reason": "Jei Leviatanas yra žaidime ir Išminčius miršta nuo egzekucijos, jis pabunda tą naktį, kad panaudotų savo gebėjimą."
       },
       {
         "id": "Farmer",
-        "reason": "If Leviathan is in play & a Farmer dies by execution, a good player becomes a Farmer that night."
+        "reason": "Jei Leviatanas yra žaidime ir Ūkininkas miršta nuo egzekucijos, geras žaidėjas tampa Ūkininku tą naktį."
       },
       {
         "id": "Mayor",
-        "reason": "If Leviathan is in play & no execution occurs on day 5, good wins."
+        "reason": "Jei Leviatanas yra žaidime ir jokia egzekucija neįvyksta 5 dieną, gėris laimi."
       }
     ]
   },
@@ -90,11 +90,11 @@
     "hatred": [
       {
         "id": "Scarlet Woman",
-        "reason": "If there are two living Al-Hadikhias, the Scarlet Woman Al-Hadikhia becomes the Scarlet Woman again."
+        "reason": "Jei yra du gyvi Al-Hadikhios, Raudonosios moters Al-Hadikhia vėl tampa Raudonąja moterimi."
       },
       {
         "id": "Mastermind",
-        "reason": "Only 1 jinxed character can be in play. Evil players start knowing which player and character it is."
+        "reason": "Tik 1 prakeiktas veikėjas gali būti žaidime. Blogi žaidėjai pradeda žinodami, kuris žaidėjas ir veikėjas tai yra."
       }
     ]
   },
@@ -103,15 +103,15 @@
     "hatred": [
       {
         "id": "Poppy Grower",
-        "reason": "If the Poppy Grower is in play, Minions don't wake together. They are woken one by one, until one of them chooses to take the Lil' Monsta token."
+        "reason": "Jei Aguonų augintojas yra žaidime, Pakalikai nepabunda kartu. Jie pažadinami po vieną, kol vienas iš jų pasirenka paimti Mažojo monstro žetoną."
       },
       {
         "id": "Magician",
-        "reason": "Only 1 jinxed character can be in play. "
+        "reason": "Tik 1 prakeiktas veikėjas gali būti žaidime."
       },
       {
         "id": "Scarlet Woman",
-        "reason": "If there are 5 or more players alive and the player holding the Lil' Monsta token dies, the Scarlet Woman is given the Lil' Monsta token tonight."
+        "reason": "Jei yra 5 ar daugiau gyvų žaidėjų ir žaidėjas, laikantis Mažojo monstro žetoną, miršta, Raudonoji moteris gauna Mažojo monstro žetoną šiąnakt."
       }
     ]
   },
@@ -120,7 +120,7 @@
     "hatred": [
       {
         "id": "Gambler",
-        "reason": "If the Lycanthrope is alive and the Gambler kills themself at night, no other players can die tonight."
+        "reason": "Jei Likantropas yra gyvas ir Lošėjas nusižudo naktį, jokie kiti žaidėjai negali mirti šiąnakt."
       }
     ]
   },
@@ -129,11 +129,11 @@
     "hatred": [
       {
         "id": "Engineer",
-        "reason": "Legion and the Engineer can not both be in play at the start of the game. If the Engineer creates Legion, most players (including all evil players) become evil Legion."
+        "reason": "Legionas ir Inžinierius negali būti žaidime kartu žaidimo pradžioje. Jei Inžinierius sukuria Legioną, dauguma žaidėjų (įskaitant visus blogus žaidėjus) tampa blogu Legionu."
       },
       {
         "id": "Preacher",
-        "reason": "Only 1 jinxed character can be in play."
+        "reason": "Tik 1 prakeiktas veikėjas gali būti žaidime."
       }
     ]
   },
@@ -142,7 +142,7 @@
     "hatred": [
       {
         "id": "Scarlet Woman",
-        "reason": "If the Fang Gu chooses an Outsider and dies, the Scarlet Woman does not become the Fang Gu."
+        "reason": "Jei Fang Gu pasirenka Autsaiderį ir miršta, Raudonoji moteris netampa Fang Gu."
       }
     ]
   },
@@ -151,23 +151,23 @@
     "hatred": [
       {
         "id": "Magician",
-        "reason": "When the Spy sees the Grimoire, the Demon and Magician's character tokens are removed."
+        "reason": "Kai Šnipas mato Grimoire, Demono ir Mago veikėjų žetonai yra pašalinti."
       },
       {
         "id": "Alchemist",
-        "reason": "The Alchemist can not have the Spy ability."
+        "reason": "Alchemikas negali turėti Šnipo gebėjimo."
       },
       {
         "id": "Poppy Grower",
-        "reason": "If the Poppy Grower is in play, the Spy does not see the Grimoire until the Poppy Grower dies."
+        "reason": "Jei Aguonų augintojas yra žaidime, Šnipas nemato Grimoire, kol Aguonų augintojas nemiršta."
       },
       {
         "id": "Damsel",
-        "reason": "Only 1 jinxed character can be in play. "
+        "reason": "Tik 1 prakeiktas veikėjas gali būti žaidime."
       },
       {
         "id": "Heretic",
-        "reason": "Only 1 jinxed character can be in play."
+        "reason": "Tik 1 prakeiktas veikėjas gali būti žaidime."
       }
     ]
   },
@@ -176,23 +176,23 @@
     "hatred": [
       {
         "id": "Magician",
-        "reason": "When the Widow sees the Grimoire, the Demon and Magician's character tokens are removed."
+        "reason": "Kai Našlė mato Grimoire, Demono ir Mago veikėjų žetonai yra pašalinti."
       },
       {
         "id": "Poppy Grower",
-        "reason": "If the Poppy Grower is in play, the Widow does not see the Grimoire until the Poppy Grower dies."
+        "reason": "Jei Aguonų augintojas yra žaidime, Našlė nemato Grimoire, kol Aguonų augintojas nemiršta."
       },
       {
         "id": "Alchemist",
-        "reason": "The Alchemist can not have the Widow ability."
+        "reason": "Alchemikas negali turėti Našlės gebėjimo."
       },
       {
         "id": "Damsel",
-        "reason": "Only 1 jinxed character can be in play."
+        "reason": "Tik 1 prakeiktas veikėjas gali būti žaidime."
       },
       {
         "id": "Heretic",
-        "reason": "Only 1 jinxed character can be in play."
+        "reason": "Tik 1 prakeiktas veikėjas gali būti žaidime."
       }
     ]
   },
@@ -201,7 +201,7 @@
     "hatred": [
       {
         "id": "Heretic",
-        "reason": "Only 1 jinxed character can be in play."
+        "reason": "Tik 1 prakeiktas veikėjas gali būti žaidime."
       }
     ]
   },
@@ -210,7 +210,7 @@
     "hatred": [
       {
         "id": "Heretic",
-        "reason": "The Baron might only add 1 Outsider, not 2."
+        "reason": "Baronas gali pridėti tik 1 Autsaiderį, ne 2."
       }
     ]
   },
@@ -219,27 +219,27 @@
     "hatred": [
       {
         "id": "Lil' Monsta",
-        "reason": "The Marionette neighbors a Minion, not the Demon. The Marionette is not woken to choose who takes the Lil' Monsta token."
+        "reason": "Marionetė yra Pakaliko kaimynas, ne Demono. Marionetė nėra žadinama pasirinkti, kas paima Mažojo monstro žetoną."
       },
       {
         "id": "Poppy Grower",
-        "reason": "When the Poppy Grower dies, the Demon learns the Marionette but the Marionette learns nothing."
+        "reason": "Kai Aguonų augintojas miršta, Demonas sužino Marionetę, bet Marionetė nieko nesužino."
       },
       {
         "id": "Snitch",
-        "reason": "The Marionette does not learn 3 not in-play characters. The Demon learns an extra 3 instead."
+        "reason": "Marionetė nesužino 3 ne žaidime esančių veikėjų. Demonas sužino papildomus 3 vietoj to."
       },
       {
         "id": "Balloonist",
-        "reason": "If the Marionette thinks that they are the Balloonist, +1 Outsider was added."
+        "reason": "Jei Marionetė galvoja, kad ji yra Oreivis, +1 Autsaideris buvo pridėtas."
       },
       {
         "id": "Damsel",
-        "reason": "The Marionette does not learn that a Damsel is in play."
+        "reason": "Marionetė nesužino, kad Dama yra žaidime."
       },
       {
         "id": "Huntsman",
-        "reason": "If the Marionette thinks that they are the Huntsman, the Damsel was added."
+        "reason": "Jei Marionetė galvoja, kad ji yra Medžiotojas, Dama buvo pridėta."
       }
     ]
   },
@@ -248,111 +248,111 @@
     "hatred": [
       {
         "id": "Engineer",
-        "reason": "Riot and the Engineer can not both be in play at the start of the game. \nIf the Engineer creates Riot, the evil players become Riot."
+        "reason": "Riaušės ir Inžinierius negali būti žaidime kartu žaidimo pradžioje. \nJei Inžinierius sukuria Riaušes, blogi žaidėjai tampa Riaušėmis."
       },
       {
         "id": "Golem",
-        "reason": "If The Golem nominates Riot, the Riot player does not die."
+        "reason": "Jei Golemas nominuoja Riaušes, Riaušių žaidėjas nemiršta."
       },
       {
         "id": "Snitch",
-        "reason": "If the Snitch is in play, each Riot player gets an extra 3 bluffs."
+        "reason": "Jei Skundikas yra žaidime, kiekvienas Riaušių žaidėjas gauna papildomus 3 blefus."
       },
       {
         "id": "Saint",
-        "reason": "If a good player nominates and kills the Saint, the Saint's team loses."
+        "reason": "Jei geras žaidėjas nominuoja ir nužudo Šventąjį, Šventojo komanda pralaimi."
       },
       {
         "id": "Butler",
-        "reason": "The Butler can not nominate their master."
+        "reason": "Liokajus negali nominuoti savo šeimininko."
       },
       {
         "id": "Pit-Hag",
-        "reason": "If the Pit-Hag creates Riot, all evil players become Riot. \nIf the Pit-Hag creates Riot after day 3, the game continues for one more day."
+        "reason": "Jei Duobkasė sukuria Riaušes, visi blogi žaidėjai tampa Riaušėmis. \nJei Duobkasė sukuria Riaušes po 3 dienos, žaidimas tęsiasi dar vieną dieną."
       },
       {
         "id": "Mayor",
-        "reason": "If the 3rd day begins with just three players alive, the players may choose (as a group) not to nominate at all. If so (and a Mayor is alive) then the Mayor's team wins."
+        "reason": "Jei 3 diena prasideda tik su trimis gyvais žaidėjais, žaidėjai gali pasirinkti (kaip grupė) visai nenominuoti. Jei taip (ir Meras yra gyvas), tada Mero komanda laimi."
       },
       {
         "id": "Monk",
-        "reason": "If a Riot player nominates and kills the Monk-protected-player, the Monk-protected-player does not die."
+        "reason": "Jei Riaušių žaidėjas nominuoja ir nužudo Vienuolio apsaugotą žaidėją, Vienuolio apsaugotas žaidėjas nemiršta."
       },
       {
         "id": "Farmer",
-        "reason": "If a Riot player nominates and kills a Farmer, the Farmer uses their ability tonight."
+        "reason": "Jei Riaušių žaidėjas nominuoja ir nužudo Ūkininką, Ūkininkas panaudoja savo gebėjimą šiąnakt."
       },
       {
         "id": "Innkeeper",
-        "reason": "If a Riot player nominates an Innkeeper-protected-player, the Innkeeper-protected-player does not die."
+        "reason": "Jei Riaušių žaidėjas nominuoja Užeigos savininko apsaugotą žaidėją, Užeigos savininko apsaugotas žaidėjas nemiršta."
       },
       {
         "id": "Sage",
-        "reason": "If a Riot player nominates and kills a Sage, the Sage uses their ability tonight."
+        "reason": "Jei Riaušių žaidėjas nominuoja ir nužudo Išminčių, Išminčius panaudoja savo gebėjimą šiąnakt."
       },
       {
         "id": "Ravenkeeper",
-        "reason": "If a Riot player nominates and kills the Ravenkeeper, the Ravenkeeper uses their ability tonight."
+        "reason": "Jei Riaušių žaidėjas nominuoja ir nužudo Varnų saugotoją, Varnų saugotojas panaudoja savo gebėjimą šiąnakt."
       },
       {
         "id": "Soldier",
-        "reason": "If a Riot player nominates the Soldier, the Soldier does not die."
+        "reason": "Jei Riaušių žaidėjas nominuoja Karį, Karys nemiršta."
       },
       {
         "id": "Grandmother",
-        "reason": "If a Riot player nominates and kills the Grandchild, the Grandmother dies too."
+        "reason": "Jei Riaušių žaidėjas nominuoja ir nužudo Anūką, Močiutė taip pat miršta."
       },
       {
         "id": "King",
-        "reason": "If a Riot player nominates and kills the King and the Choirboy is alive, the Choirboy uses their ability tonight."
+        "reason": "Jei Riaušių žaidėjas nominuoja ir nužudo Karalių ir Choristas yra gyvas, Choristas panaudoja savo gebėjimą šiąnakt."
       },
       {
         "id": "Exorcist",
-        "reason": "Only 1 jinxed character can be in play."
+        "reason": "Žaidime gali būti tik 1 prakeiktas veikėjas."
       },
       {
         "id": "Minstrel",
-        "reason": "Only 1 jinxed character can be in play."
+        "reason": "Žaidime gali būti tik 1 prakeiktas veikėjas."
       },
       {
         "id": "Flowergirl",
-        "reason": "Only 1 jinxed character can be in play."
+        "reason": "Žaidime gali būti tik 1 prakeiktas veikėjas."
       },
       {
         "id": "Undertaker",
-        "reason": "Players that die by nomination register as being executed to the Undertaker."
+        "reason": "Žaidėjai, kurie miršta nuo nominacijos, registruojami kaip nubausti mirtimi Laidojimo savininkui."
       },
       {
         "id": "Cannibal",
-        "reason": "Players that die by nomination register as being executed to the Cannibal."
+        "reason": "Žaidėjai, kurie miršta nuo nominacijos, registruojami kaip nubausti mirtimi Kanibalui."
       },
       {
         "id": "Pacifist",
-        "reason": "Players that die by nomination register as being executed to the Pacifist."
+        "reason": "Žaidėjai, kurie miršta nuo nominacijos, registruojami kaip nubausti mirtimi Pacifistui."
       },
       {
         "id": "Devil's Advocate",
-        "reason": "Players that die by nomination register as being executed to the Devil's Advocate."
+        "reason": "Žaidėjai, kurie miršta nuo nominacijos, registruojami kaip nubausti mirtimi Velnio advokatui."
       },
       {
         "id": "Investigator",
-        "reason": "Riot registers as a Minion to the Investigator."
+        "reason": "Riaušės registruojamos kaip Pakalikas Tyrėjui."
       },
       {
         "id": "Clockmaker",
-        "reason": "Riot registers as a Minion to the Clockmaker."
+        "reason": "Riaušės registruojamos kaip Pakalikas Laikrodininkui."
       },
       {
         "id": "Town Crier",
-        "reason": "Riot registers as a Minion to the Town Crier."
+        "reason": "Riaušės registruojamos kaip Pakalikas Miesto šaukliui."
       },
       {
         "id": "Damsel",
-        "reason": "Riot registers as a Minion to the Damsel."
+        "reason": "Riaušės registruojamos kaip Pakalikas Damai."
       },
       {
         "id": "Preacher",
-        "reason": "Riot registers as a Minion to the Preacher."
+        "reason": "Riaušės registruojamos kaip Pakalikas Pamokslininkui."
       }
     ]
   },
@@ -361,15 +361,15 @@
     "hatred": [
       {
         "id": "Mastermind",
-        "reason": "If the Mastermind is alive and the Lleech's host dies by execution, the Lleech lives but loses their ability. "
+        "reason": "Jei Sumanytojas yra gyvas ir Lėčiaus šeimininkas miršta nuo egzekucijos, Lėčius gyvena, bet praranda savo gebėjimą."
       },
       {
         "id": "Slayer",
-        "reason": "If the Slayer slays the Lleech's host, the host dies. "
+        "reason": "Jei Žudikas nužudo Lėčiaus šeimininką, šeimininkas miršta."
       },
       {
         "id": "Heretic",
-        "reason": "If the Lleech has poisoned the Heretic then the Lleech dies, the Heretic remains poisoned."
+        "reason": "Jei Lėčius apnuodijo Eretiką, tada Lėčius miršta, Eretikas lieka apnuodytas."
       }
     ]
   }

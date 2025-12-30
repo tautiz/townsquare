@@ -11,17 +11,19 @@
       title="Show Character Reference"
     />
     <h3>
-      Night Order
+      Nakties tvarka
       <font-awesome-icon icon="cloud-moon" />
       {{ edition.name || "Custom Script" }}
     </h3>
     <div class="night">
       <ul class="first">
-        <li class="headline">First Night</li>
+        <li class="headline">Pirmoji naktis</li>
         <li
           v-for="role in rolesFirstNight"
           :key="role.name"
           :class="[role.team]"
+          @click="showRoleInfo(role)"
+          class="clickable"
         >
           <span class="name">
             {{ role.name }}
@@ -44,10 +46,12 @@
               backgroundImage: `url(${
                 role.image && grimoire.isImageOptIn
                   ? role.image
-                  : require('../../assets/icons/' +
-                      (role.imageAlt || role.id) +
-                      '.png')
-              })`
+                  : require(
+                      '../../assets/icons/' +
+                        (role.imageAlt || role.id) +
+                        '.png',
+                    )
+              })`,
             }"
           ></span>
           <span class="reminder" v-if="role.firstNightReminder">
@@ -56,11 +60,13 @@
         </li>
       </ul>
       <ul class="other">
-        <li class="headline">Other Nights</li>
+        <li class="headline">Kitos naktys</li>
         <li
           v-for="role in rolesOtherNight"
           :key="role.name"
           :class="[role.team]"
+          @click="showRoleInfo(role)"
+          class="clickable"
         >
           <span
             class="icon"
@@ -69,10 +75,12 @@
               backgroundImage: `url(${
                 role.image && grimoire.isImageOptIn
                   ? role.image
-                  : require('../../assets/icons/' +
-                      (role.imageAlt || role.id) +
-                      '.png')
-              })`
+                  : require(
+                      '../../assets/icons/' +
+                        (role.imageAlt || role.id) +
+                        '.png',
+                    )
+              })`,
             }"
           ></span>
           <span class="name">
@@ -104,73 +112,79 @@ import { mapMutations, mapState } from "vuex";
 
 export default {
   components: {
-    Modal
+    Modal,
   },
   computed: {
-    rolesFirstNight: function() {
+    rolesFirstNight: function () {
       const rolesFirstNight = [];
       // add minion / demon infos to night order sheet
       if (this.players.length > 6) {
         rolesFirstNight.push(
           {
             id: "evil",
-            name: "Minion info",
+            name: this.edition.id === 'hp' ? "Pakalikų info" : "Minion info",
             firstNight: 5,
             team: "minion",
-            players: this.players.filter(p => p.role.team === "minion"),
-            firstNightReminder:
-              "• If more than one Minion, they all make eye contact with each other. " +
-              "• Show the “This is the Demon” card. Point to the Demon."
+            players: this.players.filter((p) => p.role.team === "minion"),
+            firstNightReminder: this.edition.id === 'hp' 
+              ? "• Jei yra daugiau nei vienas Pakalikas, jie visi užmezga akių kontaktą. • Parodykite „Tai yra Demonas“ kortelę. Parodykite į Demoną."
+              : "• If more than one Minion, they all make eye contact with each other. • Show the “This is the Demon” card. Point to the Demon.",
           },
           {
             id: "evil",
-            name: "Demon info & bluffs",
+            name: this.edition.id === 'hp' ? "Demono info ir blefai" : "Demon info & bluffs",
             firstNight: 8,
             team: "demon",
-            players: this.players.filter(p => p.role.team === "demon"),
-            firstNightReminder:
-              "• Show the “These are your minions” card. Point to each Minion. " +
-              "• Show the “These characters are not in play” card. Show 3 character tokens of good " +
-              "characters not in play."
-          }
+            players: this.players.filter((p) => p.role.team === "demon"),
+            firstNightReminder: this.edition.id === 'hp'
+              ? "• Parodykite „Tai tavo pakalikai“ kortelę. Parodykite į kiekvieną Pakaliką. • Parodykite „Šių veikėjų nėra žaidime“ kortelę. Parodykite 3 gerųjų veikėjų žetonus, kurių nėra žaidime."
+              : "• Show the “These are your minions” card. Point to each Minion. • Show the “These characters are not in play” card. Show 3 character tokens of good characters not in play.",
+          },
         );
       }
-      this.roles.forEach(role => {
-        const players = this.players.filter(p => p.role.id === role.id);
+      
+      this.roles.forEach((role) => {
+        const players = this.players.filter((p) => p.role.id === role.id);
         if (role.firstNight && (role.team !== "traveler" || players.length)) {
           rolesFirstNight.push(Object.assign({ players }, role));
         }
       });
       this.fabled
         .filter(({ firstNight }) => firstNight)
-        .forEach(fabled => {
+        .forEach((fabled) => {
           rolesFirstNight.push(Object.assign({ players: [] }, fabled));
         });
       rolesFirstNight.sort((a, b) => a.firstNight - b.firstNight);
       return rolesFirstNight;
     },
-    rolesOtherNight: function() {
+    rolesOtherNight: function () {
       const rolesOtherNight = [];
-      this.roles.forEach(role => {
-        const players = this.players.filter(p => p.role.id === role.id);
+      this.roles.forEach((role) => {
+        const players = this.players.filter((p) => p.role.id === role.id);
         if (role.otherNight && (role.team !== "traveler" || players.length)) {
           rolesOtherNight.push(Object.assign({ players }, role));
         }
       });
       this.fabled
         .filter(({ otherNight }) => otherNight)
-        .forEach(fabled => {
+        .forEach((fabled) => {
           rolesOtherNight.push(Object.assign({ players: [] }, fabled));
         });
       rolesOtherNight.sort((a, b) => a.otherNight - b.otherNight);
       return rolesOtherNight;
     },
     ...mapState(["roles", "modals", "edition", "grimoire"]),
-    ...mapState("players", ["players", "fabled"])
+    ...mapState("players", ["players", "fabled"]),
   },
   methods: {
-    ...mapMutations(["toggleModal"])
-  }
+    ...mapMutations(["toggleModal"]),
+    showRoleInfo(role) {
+      if (role && role.id) {
+        this.$store.commit("setShowInfoRole", role);
+        this.$store.commit("toggleModal", "showInfo");
+      }
+    },
+  },
 };
 </script>
 
@@ -259,6 +273,13 @@ ul {
     display: flex;
     width: 100%;
     margin-bottom: 3px;
+    &.clickable {
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
     .icon {
       width: 6vh;
       background-size: cover;
